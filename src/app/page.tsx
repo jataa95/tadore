@@ -54,19 +54,30 @@ const notes = [
 export default function Home() {
   return (
     <>
-      {/* HERO */}
+      {/* HERO — headline left, video centred, intro + actions right */}
       <section>
-        <div className="mx-auto grid max-w-[90rem] gap-14 px-5 pt-10 pb-16 md:grid-cols-2 md:items-center md:px-10 md:pt-14">
-          <div className="order-2 md:order-1">
+        <div className="mx-auto grid max-w-[90rem] gap-10 px-5 pt-8 pb-16 md:px-10 md:pt-12 xl:grid-cols-[1fr_auto_1fr] xl:items-center xl:gap-12">
+          <div className="text-center xl:self-start xl:pt-6 xl:text-left">
             <Eyebrow>{site.tagline}</Eyebrow>
-            <Title as="h1" className="mt-6 text-[3.4rem] sm:text-7xl lg:text-[6.4rem]">
+            <Title as="h1" className="mt-6 text-[3.4rem] sm:text-7xl xl:text-[5.2rem] 2xl:text-[5.6rem]">
               Made in Nigeria. Built for streetwear.
             </Title>
-            <p className="mt-10 max-w-md text-[0.95rem] leading-relaxed text-mute">
+          </div>
+
+          <div className="relative mx-auto w-full max-w-sm sm:max-w-md xl:w-[min(30vw,27rem)]">
+            <HeroVideo className="aspect-[4/5] w-full" />
+            <SpinBadge
+              text="Training · Production · Wholesale ·"
+              className="absolute -bottom-10 left-1/2 -translate-x-1/2"
+            />
+          </div>
+
+          <div className="pt-8 text-center xl:self-end xl:pt-0 xl:pb-6 xl:text-left">
+            <p className="mx-auto max-w-sm text-[0.95rem] leading-relaxed text-mute xl:mx-0">
               T.adore trains the next generation of fashion makers, produces for growing brands, and supplies
               quality basics at wholesale — all from one studio.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-3 xl:justify-start">
               <Button href={whatsappLink("Hello T.adore, I'd like to start a production order.")} external>
                 Start an order
               </Button>
@@ -74,13 +85,6 @@ export default function Home() {
                 Join the academy
               </Button>
             </div>
-          </div>
-          <div className="relative order-1 md:order-2 md:pl-12">
-            <HeroVideo className="aspect-[4/5] max-h-[78vh] w-full" />
-            <SpinBadge
-              text="Training · Production · Wholesale ·"
-              className="absolute -bottom-10 left-4 md:top-[62%] md:bottom-auto md:left-0"
-            />
           </div>
         </div>
 
