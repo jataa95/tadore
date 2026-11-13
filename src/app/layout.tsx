@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Italiana } from "next/font/google";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { Preloader } from "@/components/preloader";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -27,8 +28,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${italiana.variable} ${inter.variable} h-full antialiased`}>
+    <html lang="en" suppressHydrationWarning className={`${italiana.variable} ${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
+        <Preloader />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
