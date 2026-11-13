@@ -3,6 +3,7 @@ import { Button, Eyebrow, Photo, SectionTitle, TextLink, Title } from "@/compone
 import { Reveal } from "@/components/reveal";
 import { Marquee } from "@/components/marquee";
 import { SpinBadge } from "@/components/spin-badge";
+import { HeroVideo } from "@/components/hero-video";
 import { EnquiryBand } from "@/components/enquiry-band";
 import { site, whatsappLink } from "@/lib/site";
 
@@ -75,13 +76,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative order-1 md:order-2 md:pl-12">
-            <Photo
-              src="/media/studio-sew-hero.webp"
-              alt="A T.adore maker sewing in the studio beneath the T.adore Signature logo"
-              priority
-              sizes="(min-width: 768px) 45vw, 100vw"
-              className="aspect-[4/5] max-h-[78vh] w-full"
-            />
+            <HeroVideo className="aspect-[4/5] max-h-[78vh] w-full" />
             <SpinBadge
               text="Training · Production · Wholesale ·"
               className="absolute -bottom-10 left-4 md:top-[62%] md:bottom-auto md:left-0"
