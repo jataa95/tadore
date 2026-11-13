@@ -33,6 +33,6 @@ npm run dev
 
 ## Images
 
-The home hero is a looping, muted production video (`public/media/hero.mp4` and `hero.webm`, poster `hero-poster.webp`), trimmed before the TikTok outro with the TikTok watermark masked. Visitors who prefer reduced motion get it paused, and there is a play/pause button.
+The home hero is a looping, muted production video (`public/media/hero.mp4` and `hero.webm`, poster `hero-poster.webp`), trimmed before the TikTok outro with the TikTok watermark masked. Visitors who prefer reduced motion see the still poster frame instead.
 
 Other photos in `public/media` are frames taken from T.adore's TikTok videos, so some still show a TikTok watermark. Replace them with original photos when available, keeping the same file names, or update the paths in the pages.
