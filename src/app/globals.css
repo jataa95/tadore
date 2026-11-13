@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  /* T.adore brand: cream & brown */
+  --color-ink: #2b1a12; /* espresso brown — logo colour */
+  --color-cocoa: #5a3e2b; /* mid brown */
+  --color-paper: #f7f1e6; /* cream */
+  --color-stone: #ece2d0; /* deeper cream / linen */
+  --color-sand: #d8c7aa;
+  --color-mute: #7a6352;
+  --color-line: #e0d3bd;
+  --font-display: var(--font-italiana), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee {
+  animation: marquee 36s linear infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee,
+  .spin-slow {
+    animation: none !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
