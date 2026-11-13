@@ -55,12 +55,12 @@ export default function Home() {
   return (
     <>
       {/* HERO
-          Mobile (< md): video first, then left-aligned headline, intro and actions.
+          Mobile (< md): video first, then centred headline, intro and actions.
           Tablet (md–xl): centred stack with the video in the middle.
           Desktop (xl+): headline left, video centred, intro + actions right. */}
       <section>
         <div className="mx-auto grid max-w-[90rem] px-5 pt-10 pb-16 md:gap-10 md:px-10 md:pt-12 xl:grid-cols-[1fr_auto_1fr] xl:items-center xl:gap-12">
-          <div className="order-2 mt-14 md:order-1 md:mt-0 md:text-center xl:self-start xl:pt-6 xl:text-left">
+          <div className="order-2 mt-14 text-center md:order-1 md:mt-0 xl:self-start xl:pt-6 xl:text-left">
             <Eyebrow>{site.tagline}</Eyebrow>
             <Title as="h1" className="mt-6 text-[3.4rem] sm:text-7xl xl:text-[5.2rem] 2xl:text-[5.6rem]">
               Made in Nigeria. Built for streetwear.
@@ -75,12 +75,12 @@ export default function Home() {
             />
           </div>
 
-          <div className="order-3 mt-10 md:mt-0 md:pt-8 md:text-center xl:self-end xl:pt-0 xl:pb-6 xl:text-left">
-            <p className="max-w-md text-[0.95rem] leading-relaxed text-mute md:mx-auto md:max-w-sm xl:mx-0">
+          <div className="order-3 mt-10 text-center md:mt-0 md:pt-8 xl:self-end xl:pt-0 xl:pb-6 xl:text-left">
+            <p className="mx-auto max-w-md text-[0.95rem] leading-relaxed text-mute md:max-w-sm xl:mx-0">
               T.adore trains the next generation of fashion makers, produces for growing brands, and supplies
               quality basics at wholesale — all from one studio.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3 md:mt-8 md:justify-center xl:justify-start">
+            <div className="mt-9 flex flex-wrap justify-center gap-3 md:mt-8 xl:justify-start">
               <Button href={whatsappLink("Hello T.adore, I'd like to start a production order.")} external>
                 Start an order
               </Button>
