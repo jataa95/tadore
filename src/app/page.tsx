@@ -56,18 +56,19 @@ export default function Home() {
     <>
       {/* HERO
           Mobile (< md): video first, then centred headline, intro and actions.
-          Tablet (md–xl): centred stack with the video in the middle.
-          Desktop (xl+): headline left, video centred, intro + actions right. */}
+          Tablet (md–lg): centred stack with the video in the middle.
+          Large screens (lg+): three columns — headline | video | intro + actions — kept compact in height. */}
       <section>
-        <div className="mx-auto grid max-w-[90rem] px-5 pt-10 pb-16 md:gap-10 md:px-10 md:pt-12 xl:grid-cols-[1fr_auto_1fr] xl:items-center xl:gap-12">
-          <div className="order-2 mt-14 text-center md:order-1 md:mt-0 xl:self-start xl:pt-6 xl:text-left">
+        <div className="mx-auto grid max-w-[90rem] px-5 pt-10 pb-16 md:gap-10 md:px-10 md:pt-12 lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-10 lg:pt-10 lg:pb-14 xl:gap-14">
+          <div className="order-2 mt-14 text-center md:order-1 md:mt-0 lg:text-left">
             <Eyebrow>{site.tagline}</Eyebrow>
-            <Title as="h1" className="mt-6 text-[3.4rem] sm:text-7xl xl:text-[5.2rem] 2xl:text-[5.6rem]">
-              Made in Nigeria. Built for streetwear.
+            <Title as="h1" className="mt-6 text-[3.4rem] sm:text-7xl lg:mt-5 lg:text-[3.5rem] xl:text-[4.3rem] 2xl:text-[4.8rem]">
+              Made in Nigeria. <br className="hidden lg:block" />
+              Built for streetwear.
             </Title>
           </div>
 
-          <div className="relative order-1 w-full md:order-2 md:mx-auto md:max-w-md xl:w-[min(30vw,27rem)]">
+          <div className="relative order-1 w-full md:order-2 md:mx-auto md:max-w-md lg:w-[min(26vw,20rem)] 2xl:w-[22rem]">
             <HeroVideo className="aspect-[4/5] max-h-[78vh] w-full md:max-h-none" />
             <SpinBadge
               text="Training · Production · Wholesale ·"
@@ -75,12 +76,12 @@ export default function Home() {
             />
           </div>
 
-          <div className="order-3 mt-10 text-center md:mt-0 md:pt-8 xl:self-end xl:pt-0 xl:pb-6 xl:text-left">
-            <p className="mx-auto max-w-md text-[0.95rem] leading-relaxed text-mute md:max-w-sm xl:mx-0">
+          <div className="order-3 mt-10 text-center md:mt-0 md:pt-8 lg:self-end lg:pt-0 lg:pb-2 lg:text-left">
+            <p className="mx-auto max-w-md text-[0.95rem] leading-relaxed text-mute md:max-w-sm lg:mx-0">
               T.adore trains the next generation of fashion makers, produces for growing brands, and supplies
               quality basics at wholesale — all from one studio.
             </p>
-            <div className="mt-9 flex flex-wrap justify-center gap-3 md:mt-8 xl:justify-start">
+            <div className="mt-9 flex flex-wrap justify-center gap-3 md:mt-8 lg:justify-start">
               <Button href={whatsappLink("Hello T.adore, I'd like to start a production order.")} external>
                 Start an order
               </Button>
