@@ -71,7 +71,7 @@ export default function Home() {
             <HeroVideo className="aspect-[4/5] max-h-[78vh] w-full md:max-h-none" />
             <SpinBadge
               text="Training · Production · Wholesale ·"
-              className="absolute -bottom-10 left-4 md:left-1/2 md:-translate-x-1/2"
+              className="absolute -bottom-10 left-1/2 -translate-x-1/2"
             />
           </div>
 
